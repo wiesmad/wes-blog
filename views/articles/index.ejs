@@ -1,0 +1,32 @@
+<%- include('_header') %>
+
+    <div class="container">
+        <!-- <h3 class="title">Blog Articles</h3>  -->
+        <% if (user) { %> 
+        <a href="/articles/new" class="btn btn-new">New Post</a>
+        <% } %> 
+        <% articles.forEach(article => { %>
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title"><%= article.title %></h4>
+                    <div class="card-subtitle">
+                        <%= article.createdAt.toLocaleDateString() %>
+                    </div>
+                    <div class="card-text">
+                        <%= article.description %>
+                    </div>
+                    <div class="btns-group">
+                        <a href="articles/<%= article.slug %>" class="btn btn-read">Read More</a>
+                        <% if (user) { %> 
+                        <a href="/articles/edit/<%= article.id %>" class="btn btn-edit">Edit</a>
+                        <form action="/articles/<%= article.id %>?_method=DELETE" method="POST">
+                            <button type="submit" class="btn btn-delete">Delete</button>
+                        </form>
+                        <% } %> 
+                    </div>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+</body>
+</html>

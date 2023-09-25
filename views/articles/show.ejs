@@ -1,0 +1,17 @@
+<%- include('_header') %>
+
+    <div class="container">
+       <h3 class="title"><%= article.title %></h3>
+        <div class="date">
+           <%= article.createdAt.toLocaleDateString() %>
+        </div>
+        <a href="/" class="btn btn-all">All Posts</a>
+        <% if (user) {%> 
+        <a href="/articles/edit/<%= article.id %>" class="btn btn-edit">Edit</a>
+        <% } %> 
+        <div>
+            <%- article.sanitizedHtml %>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: gray;
+  font-family: 'Lato', sans-serif;
+}
+
+.container {
+  padding: 5vw;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 450px;
+  gap: 0.3em;
+  margin-bottom: 1em;
+}
+
+.form-control {
+  height: 2rem;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+}
+
+.btns-group {
+  display: flex;
+  gap: 0.5em;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 1rem;
+  border: none;
+  border-radius: 3px;
+  background: darkgray;
+  color: whitesmoke;
+  margin: 0.5em 0;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+
+.btn-new {
+  background: rgba(247, 255, 135, 0.5);
+}
+
+.btn-log {
+  display: inline-block;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: .7rem;
+  border: 1px solid rgba(0,0,0, .3);
+  border-radius: 3px;
+  background: transparent;
+  color: rgba(0,0,0, .6);
+  margin-block: 0.5em;
+  padding: 0.2em .7em;
+  cursor: pointer;
+}
+
+.btn-log:hover, .btn-log:focus {
+  background-color: rgba(247, 255, 135, 0.5);
+  color: whitesmoke;
+}
+
+.card {
+  width: 100%;
+  max-width: 350px;
+  border: 1px solid black;
+  border-radius: 3px;
+  margin-bottom: 1em;
+  padding: 0 1em;
+}
+
+.card-subtitle {
+  font-size: .7rem;
+}
+

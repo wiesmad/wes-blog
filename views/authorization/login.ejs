@@ -1,0 +1,32 @@
+<%- include('../articles/_header') %>
+
+<body>
+  <div class="container" >
+    <form class="form-group" action="/login" method="POST">
+      <!-- <h3>Login</h3> -->
+      <input class="form-control" type="text" name="name" placeholder="Name" required />
+      <input class="form-control" type="password" name="pass" placeholder="Password" required />
+      <button class="btn">submit</button>
+    </form>
+    <a class="btn" href="/">Home</a>
+  </div>
+  <!-- <script>
+    const form = document.querySelector('form');
+
+    form.addEventListener('click', async (ev) => {
+      ev.preventDefault();
+      const name = form.name.value;
+      const pass = form.pass.value;
+      try {
+        const res = await fetch('/login', {
+          method: 'POST',
+          body: JSON.stringify({ name, pass }),
+          headers: { 'Content-Type': 'application/json' },
+        });
+        location.assign('/')
+      } catch (err) {
+        console.log(err);
+      }
+    });
+  </script> -->
+</body>
